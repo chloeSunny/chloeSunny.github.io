@@ -3,22 +3,25 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Hello World | hueman</title>
+    <title>Nginx+Tomcat搭建负载均衡 | hueman</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="" />
+        <meta name="keywords" content="服务器搭建,负载均衡" />
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="工具 目标 步骤   工具 Nginx 1.12.2  tomcat-8.5.24 Mac 10.13.2  目标搭建一个高性能负载均衡的Tomcat集群。Nginx不仅只是一个反向代理服务器，它本身也可以进行网站托管，作为web服务器，对http请求进行分发。  步骤1、安装Nginx首先安装homebrew，命令行：1ruby -e &amp;quot;$(curl -fsSL https://ra">
+<meta name="keywords" content="服务器搭建,负载均衡">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/03/08/hello-world/index.html">
+<meta property="og:title" content="Nginx+Tomcat搭建负载均衡">
+<meta property="og:url" content="http://yoursite.com/2018/04/26/Nginx+Tomcat搭建负载均衡/index.html">
 <meta property="og:site_name" content="hueman">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2018-03-08T06:05:06.792Z">
+<meta property="og:description" content="工具 目标 步骤   工具 Nginx 1.12.2  tomcat-8.5.24 Mac 10.13.2  目标搭建一个高性能负载均衡的Tomcat集群。Nginx不仅只是一个反向代理服务器，它本身也可以进行网站托管，作为web服务器，对http请求进行分发。  步骤1、安装Nginx首先安装homebrew，命令行：1ruby -e &amp;quot;$(curl -fsSL https://ra">
+<meta property="og:image" content="https://img-blog.csdn.net/20180426230032672">
+<meta property="og:updated_time" content="2018-04-28T09:33:12.095Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Nginx+Tomcat搭建负载均衡">
+<meta name="twitter:description" content="工具 目标 步骤   工具 Nginx 1.12.2  tomcat-8.5.24 Mac 10.13.2  目标搭建一个高性能负载均衡的Tomcat集群。Nginx不仅只是一个反向代理服务器，它本身也可以进行网站托管，作为web服务器，对http请求进行分发。  步骤1、安装Nginx首先安装homebrew，命令行：1ruby -e &amp;quot;$(curl -fsSL https://ra">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20180426230032672">
     
 
     
@@ -131,14 +134,14 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-hello-world" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-Nginx+Tomcat搭建负载均衡" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Hello World
+        Nginx+Tomcat搭建负载均衡
         </h1>
     
 
@@ -148,25 +151,52 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/03/08/hello-world/" class="article-date">
-            <time datetime="2018-03-08T06:05:06.792Z" itemprop="datePublished">2018-03-08</time>
+        <a href="/2018/04/26/Nginx+Tomcat搭建负载均衡/" class="article-date">
+            <time datetime="2018-04-26T14:12:20.000Z" itemprop="datePublished">2018-04-26</time>
         </a>
     </div>
 
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/服务器搭建/">服务器搭建</a>, <a class="tag-link" href="/tags/负载均衡/">负载均衡</a>
+    </div>
+
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <ul>
+<li><strong>工具</strong></li>
+<li><strong>目标</strong></li>
+<li><strong>步骤</strong></li>
+</ul>
+<hr>
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a><strong>工具</strong></h3><ul>
+<li>Nginx 1.12.2 </li>
+<li>tomcat-8.5.24</li>
+<li>Mac 10.13.2</li>
+</ul>
+<h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a><strong>目标</strong></h3><p>搭建一个高性能负载均衡的Tomcat集群。Nginx不仅只是一个反向代理服务器，它本身也可以进行网站托管，作为web服务器，对http请求进行分发。</p>
+<p><img src="https://img-blog.csdn.net/20180426230032672" alt=""></p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a><strong>步骤</strong></h3><h4 id="1、安装Nginx"><a href="#1、安装Nginx" class="headerlink" title="1、安装Nginx"></a><strong>1、安装Nginx</strong></h4><p>首先安装homebrew，命令行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span><br></pre></td></tr></table></figure></p>
+<p>安装Nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nginx</span><br></pre></td></tr></table></figure></p>
+<p>启动Nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx</span><br></pre></td></tr></table></figure></p>
+<p>不报错，浏览器输入地址 <a href="http://localhost:8080/" target="_blank" rel="noopener">http://localhost:8080/</a> 可以看到Nginx启动页面，OK</p>
+<h4 id="2、安装配置Tomcat"><a href="#2、安装配置Tomcat" class="headerlink" title="2、安装配置Tomcat"></a><strong>2、安装配置Tomcat</strong></h4><p>解压出两个tomcat，分别命名为apache-tomcat-8.5.24-1和apache-tomcat-8.5.24-2</p>
+<p><img src="https://img-blog.csdn.net/20180426231958710" alt=""></p>
+<p>接下来修改两个Tomcat的启动端口，分别修改成18080和28080。打开Tomcat的conf目录下的server.xml，修改两个地方：</p>
+<p><img src="https://img-blog.csdn.net/20180428162524403" alt=""></p>
+<p><img src="https://img-blog.csdn.net/2018042816251494" alt=""></p>
+<p>第二个tomcat照着第一个改，把端口号改为28080就好。</p>
+<p>然后启动两个Tomcat，打开浏览器分别访问<a href="http://localhost:18080/和http://localhost:28080出现tomcat启动页面，就说明Tomcat服务器已经成功启动了。" target="_blank" rel="noopener">http://localhost:18080/和http://localhost:28080出现tomcat启动页面，就说明Tomcat服务器已经成功启动了。</a><br>然后修改两个Tomcat的启动页面，以对两个Tomcat进行区分。修改Tomcat下的/webapps/ROOT/index.jsp。在文件中加入这段语句：</p>
+<p><img src="https://img-blog.csdn.net/20180428171004682" alt=""></p>
+<p>修改完成后启动tomcat，输入相应的地址会出现以下页面，说明年修改成功。第二个tomcat也仿照第一个来进行修改，保证与第一个可以区分。</p>
+<p><img src="https://img-blog.csdn.net/20180428171230254" alt=""></p>
+<h4 id="3、配置Nginx"><a href="#3、配置Nginx" class="headerlink" title="3、配置Nginx"></a><strong>3、配置Nginx</strong></h4><p>最核心的部分就是配置Nginx了，虽然也不过是在config文件里改改改。<br>Nginx文件夹下，有个nginx.conf文件。找不到可以通过这种方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /| grep nginx.conf</span><br></pre></td></tr></table></figure></p>
+<p>配置文件内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">worker_processes  1;   #工作进程的个数，一般与计算机的CPU核数相同</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;       #单个进程最大连接数（最大连接数=连接数*进程数）</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;    #文件扩展名与文件类型映射表</span><br><span class="line">    default_type  application/octet-stream;   #默认文件类型</span><br><span class="line"></span><br><span class="line">    keepalive_timeout  65;  #长连接超时时间，单位秒</span><br><span class="line"></span><br><span class="line">    sendfile        on;  #开启高效文件传输模式，sendfile指令指定nginx是否调用sendfile函数来输出文件，对于普通应用设为 on，如果用来进行下载等应用磁盘IO重负载应用，可设置为off，以平衡磁盘与网络I/O处理速度，降低系统的负载。注意：如果图片显示不正常把这个改成off。  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line"></span><br><span class="line">    gzip  on;     #启用Gzip压缩——有助于前端页面性能</span><br><span class="line"></span><br><span class="line">    #服务器的集群</span><br><span class="line">    upstream localhost_tomcat&#123;   #集群名称</span><br><span class="line">        server localhost:18080 weight=1;  #服务器配置，weight是权重</span><br><span class="line">        server localhost:28080 weight=2;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen       8080;</span><br><span class="line">        server_name  localhost;   #当前服务器域名</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	location / &#123;</span><br><span class="line">	    proxy_pass http://localhost_tomcat;   #与配置的服务器集群名称一致</span><br><span class="line">      	    proxy_redirect default;</span><br><span class="line">	&#125;</span><br><span class="line">       </span><br><span class="line">        error_page   500 502 503 504  /50x.html;</span><br><span class="line">        location = /50x.html &#123;</span><br><span class="line">            root   html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>此处的配置核心，就是服务器权重的配置和当前server的配置，location的配置需要也需要和upstream中的服务器集群名称一致。<br>到此配置完成。</p>
+<p>然后启动Nginx和两个tomcat，输入localhost/index.jsp即可看到负载均衡的结果。多次刷新可以大概算出tomcat2的出现频率是tomcat1的2倍，及配置的权重。</p>
 
         </div>
         <footer class="article-footer">
@@ -174,7 +204,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2018/03/08/hello-world/" data-id="cjgglzct400012ygodv7jholy" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2018/04/26/Nginx+Tomcat搭建负载均衡/" data-id="cjggoflmr000036go2y260cob" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -311,16 +341,12 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/04/26/Nginx+Tomcat搭建负载均衡/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">més nou</strong>
-        <p class="article-nav-title">
-        
-            Nginx+Tomcat搭建负载均衡
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
+        <a href="/2018/03/08/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">antic</strong>
+        <p class="article-nav-title">Hello World</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
     
 </nav>
 
@@ -457,7 +483,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/2018/03/08/hello-world/';
+    var disqus_url = 'http://yoursite.com/2018/04/26/Nginx+Tomcat搭建负载均衡/';
     
     (function() {
     var dsq = document.createElement('script');
