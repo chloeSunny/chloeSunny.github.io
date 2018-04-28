@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="hueman">
 <meta property="og:description" content="工具 目标 步骤   工具 Nginx 1.12.2  tomcat-8.5.24 Mac 10.13.2  目标搭建一个高性能负载均衡的Tomcat集群。Nginx不仅只是一个反向代理服务器，它本身也可以进行网站托管，作为web服务器，对http请求进行分发。  步骤1、安装Nginx首先安装homebrew，命令行：1ruby -e &amp;quot;$(curl -fsSL https://ra">
 <meta property="og:image" content="https://img-blog.csdn.net/20180426230032672">
-<meta property="og:updated_time" content="2018-04-28T09:39:38.672Z">
+<meta property="og:updated_time" content="2018-04-28T09:40:45.793Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx+Tomcat搭建负载均衡">
 <meta name="twitter:description" content="工具 目标 步骤   工具 Nginx 1.12.2  tomcat-8.5.24 Mac 10.13.2  目标搭建一个高性能负载均衡的Tomcat集群。Nginx不仅只是一个反向代理服务器，它本身也可以进行网站托管，作为web服务器，对http请求进行分发。  步骤1、安装Nginx首先安装homebrew，命令行：1ruby -e &amp;quot;$(curl -fsSL https://ra">
@@ -189,7 +189,7 @@
 <p><img src="https://img-blog.csdn.net/20180428162524403" alt=""></p>
 <p><img src="https://img-blog.csdn.net/2018042816251494" alt=""></p>
 <p>第二个tomcat照着第一个改，把端口号改为28080就好。</p>
-<p>然后启动两个Tomcat，打开浏览器分别访问localhost:18080/ 和localhost:28080 出现tomcat启动页面，就说明Tomcat服务器已经成功启动了。<br>然后修改两个Tomcat的启动页面，以对两个Tomcat进行区分。修改Tomcat下的/webapps/ROOT/index.jsp。在文件中加入这段语句：</p>
+<p>然后启动两个Tomcat，打开浏览器分别访问localhost:18080 和localhost:28080 出现tomcat启动页面，就说明Tomcat服务器已经成功启动了。<br>然后修改两个Tomcat的启动页面，以对两个Tomcat进行区分。修改Tomcat下的/webapps/ROOT/index.jsp。在文件中加入这段语句：</p>
 <p><img src="https://img-blog.csdn.net/20180428171004682" alt=""></p>
 <p>修改完成后启动tomcat，输入相应的地址会出现以下页面，说明年修改成功。第二个tomcat也仿照第一个来进行修改，保证与第一个可以区分。</p>
 <p><img src="https://img-blog.csdn.net/20180428171230254" alt=""></p>
@@ -204,7 +204,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2018/04/26/Nginx+Tomcat搭建负载均衡/" data-id="cjgj6zcvo0000jt8tfyjaebym" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2018/04/26/Nginx+Tomcat搭建负载均衡/" data-id="cjgj74ksi0000ma8twi2rjlyj" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
