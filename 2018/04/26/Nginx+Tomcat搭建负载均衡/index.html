@@ -18,7 +18,7 @@
 <meta property="og:description" content="工具 目标 步骤   工具 Nginx 1.12.2  tomcat-8.5.24 Mac 10.13.2  目标搭建一个高性能负载均衡的Tomcat集群。Nginx不仅只是一个反向代理服务器，它本身也可以进行网站托管，作为web服务器，对http请求进行分发。  步骤1、安装Nginx首先安装homebrew，命令行：1ruby -e &amp;quot;$(curl -fsSL https://ra">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://img-blog.csdn.net/20180426230032672">
-<meta property="og:updated_time" content="2018-04-28T09:40:45.793Z">
+<meta property="og:updated_time" content="2018-04-28T10:06:00.262Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx+Tomcat搭建负载均衡">
 <meta name="twitter:description" content="工具 目标 步骤   工具 Nginx 1.12.2  tomcat-8.5.24 Mac 10.13.2  目标搭建一个高性能负载均衡的Tomcat集群。Nginx不仅只是一个反向代理服务器，它本身也可以进行网站托管，作为web服务器，对http请求进行分发。  步骤1、安装Nginx首先安装homebrew，命令行：1ruby -e &amp;quot;$(curl -fsSL https://ra">
@@ -191,7 +191,7 @@
 <p><img src="https://img-blog.csdn.net/2018042816251494" alt=""></p>
 <p>第二个tomcat照着第一个改，把端口号改为28080就好。</p>
 <p>然后启动两个Tomcat，打开浏览器分别访问localhost:18080 和localhost:28080 出现tomcat启动页面，就说明Tomcat服务器已经成功启动了。<br>然后修改两个Tomcat的启动页面，以对两个Tomcat进行区分。修改Tomcat下的/webapps/ROOT/index.jsp。在文件中加入这段语句：</p>
-<p><img src="https://img-blog.csdn.net/20180428171004682" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/chloeSunny/chloeSunny.github.io/master/WechatIMG451.jpeg" alt=""></p>
 <p>修改完成后启动tomcat，输入相应的地址会出现以下页面，说明年修改成功。第二个tomcat也仿照第一个来进行修改，保证与第一个可以区分。</p>
 <p><img src="https://img-blog.csdn.net/20180428171230254" alt=""></p>
 <h4 id="3、配置Nginx"><a href="#3、配置Nginx" class="headerlink" title="3、配置Nginx"></a><strong>3、配置Nginx</strong></h4><p>最核心的部分就是配置Nginx了，虽然也不过是在config文件里改改改。<br>Nginx文件夹下，有个nginx.conf文件。找不到可以通过这种方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find /| grep nginx.conf</span><br></pre></td></tr></table></figure></p>
